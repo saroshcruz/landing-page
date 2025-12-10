@@ -8,6 +8,11 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
   <!-- AOS for scroll animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
@@ -16,19 +21,41 @@
 </head>
 <body class="bg-[#f1f5f9] text-[#111827]">
 
+  <!-- Progress bar -->
+  <div id="progressWrap" class="fixed top-0 left-0 w-full h-1 z-50 bg-transparent">
+    <div id="progressBar" class="h-full bg-gradient-to-r from-[#06b6d4] via-[#8b5cf6] to-[#f472b6]" style="width:0%"></div>
+  </div>
+
+  <!-- Sticky Nav -->
+  <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 z-40 bg-white/10 backdrop-blur rounded-xl px-4 py-2 flex items-center gap-6 shadow-lg">
+    <div class="text-white font-bold">Sarosh</div>
+    <a class="text-sm text-white/80 hover:text-white" href="#about">About</a>
+    <a class="text-sm text-white/80 hover:text-white" href="#projects">Projects</a>
+    <a class="text-sm text-white/80 hover:text-white" href="#contact">Contact</a>
+  </nav>
+
+  <!-- Animated background blobs (parallax) -->
+  <div id="bg-blobs" class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+    <div id="blob1" class="absolute rounded-full blur-3xl opacity-60 bg-gradient-to-r from-[#06b6d4] to-[#8b5cf6] w-[40vmax] h-[40vmax] left-[-10vmax] top-[-15vmax]" aria-hidden="true"></div>
+    <div id="blob2" class="absolute rounded-full blur-2xl opacity-50 bg-gradient-to-r from-[#f472b6] to-[#fb923c] w-[30vmax] h-[30vmax] right-[-8vmax] bottom-[-10vmax]" aria-hidden="true"></div>
+  </div>
+
   <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col justify-center items-center bg-[#0f172a] text-white">
-    <h1 class="text-5xl font-bold mb-4" data-aos="fade-up">Hi, I'm Sarosh</h1>
+  <section id="hero" data-theme="dark" class="min-h-screen flex flex-col justify-center items-center text-white">
+    <h1 class="text-5xl font-extrabold mb-4 drop-shadow-lg" data-aos="fade-up">Hi, I'm Sarosh</h1>
     <p class="text-2xl mb-6" data-aos="fade-up" data-aos-delay="200">
       <span class="typed"></span>
     </p>
-    <a href="#projects" class="px-6 py-3 bg-[#3b82f6] rounded-lg hover:bg-[#2563eb]" data-aos="fade-up" data-aos-delay="400">
+    <a href="#projects" class="px-6 py-3 bg-white/10 border border-white/20 rounded-lg hover:backdrop-brightness-125" data-aos="fade-up" data-aos-delay="400">
       See My Work
     </a>
+
+    <div class="mt-12 text-sm text-white/70" data-aos="fade-up" data-aos-delay="600">Scroll to explore →</div>
   </section>
 
+
   <!-- About Me Section -->
-  <section id="about" class="py-20 px-8 max-w-4xl mx-auto" data-aos="fade-right">
+  <section id="about" data-theme="calm" class="py-20 px-8 max-w-4xl mx-auto" data-aos="fade-right">
     <h2 class="text-4xl font-bold mb-6 text-[#0f172a]">About Me</h2>
     <p class="text-lg leading-relaxed">
       I’m a frontend developer with a passion for creating dynamic, interactive web experiences. I specialize in JavaScript, React, and modern CSS techniques to make websites come alive.
@@ -36,7 +63,7 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-20 px-8 max-w-6xl mx-auto">
+  <section id="projects" data-theme="bright" class="py-20 px-8 max-w-6xl mx-auto">
     <h2 class="text-4xl font-bold mb-12 text-[#0f172a]" data-aos="fade-left">Projects</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Project Card Example -->
@@ -55,9 +82,9 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20 px-8 bg-[#0f172a] text-white text-center">
-    <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Get In Touch</h2>
-    <p data-aos="fade-up" data-aos-delay="200">Email me at <a href="mailto:sarosh@example.com" class="text-[#facc15]">sarosh@example.com</a></p>
+  <section id="contact" data-theme="warm" class="py-20 px-8 text-center" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-6">Get In Touch</h2>
+    <p data-aos-delay="200">Email me at <a href="mailto:sarosh@example.com" class="text-[#facc15]">sarosh@example.com</a></p>
   </section>
 
   <!-- Typed.js -->

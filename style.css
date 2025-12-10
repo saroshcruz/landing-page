@@ -1,12 +1,44 @@
+:root{
+  --accent: #06b6d4;
+  --accent-2: #8b5cf6;
+  --bg-blur: 28px;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  transition: color 300ms ease, background 300ms ease;
 }
 
-.project-card {
-  transform: translateY(20px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+/* Progress bar */
+#progressWrap{pointer-events:none}
+#progressBar{transition:width 120ms ease}
 
-.project-card:hover {
-  transform: translateY(0);
+/* Blobs */
+#bg-blobs div{will-change:transform; transition:transform 0.12s linear}
+
+/* Sections reveal */
+section{transition:opacity 600ms ease, transform 600ms ease}
+section:not(.in-view){opacity:.85; transform:translateY(12px)}
+section.in-view{opacity:1; transform:none}
+
+.project-card{transform:translateY(18px); transition:transform .36s cubic-bezier(.2,.9,.2,1), box-shadow .36s}
+.project-card:hover{transform:translateY(0); box-shadow:0 18px 50px rgba(2,6,23,.12)}
+
+/* Themed accents via data attributes for sections */
+section[data-theme="dark"]{--accent:#06b6d4}
+section[data-theme="calm"]{--accent:#60a5fa}
+section[data-theme="bright"]{--accent:#f59e0b}
+section[data-theme="warm"]{--accent:#fb7185}
+
+/* Use accent as subtle border or highlight */
+a{transition:color 220ms ease}
+
+/* Small utility for hero */
+#hero{min-height:80vh}
+
+@media (prefers-reduced-motion: reduce){
+  #bg-blobs div{transition:none}
+  .project-card, section{transition:none}
 }
