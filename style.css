@@ -1,0 +1,12 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.project-card {
+  transform: translateY(20px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(0);
+}

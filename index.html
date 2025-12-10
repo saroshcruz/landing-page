@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarosh Cruz - Developer Portfolio</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#f1f5f9] text-[#111827]">
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center bg-[#0f172a] text-white">
+    <h1 class="text-5xl font-bold mb-4" data-aos="fade-up">Hi, I'm Sarosh</h1>
+    <p class="text-2xl mb-6" data-aos="fade-up" data-aos-delay="200">
+      <span class="typed"></span>
+    </p>
+    <a href="#projects" class="px-6 py-3 bg-[#3b82f6] rounded-lg hover:bg-[#2563eb]" data-aos="fade-up" data-aos-delay="400">
+      See My Work
+    </a>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="py-20 px-8 max-w-4xl mx-auto" data-aos="fade-right">
+    <h2 class="text-4xl font-bold mb-6 text-[#0f172a]">About Me</h2>
+    <p class="text-lg leading-relaxed">
+      I’m a frontend developer with a passion for creating dynamic, interactive web experiences. I specialize in JavaScript, React, and modern CSS techniques to make websites come alive.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-8 max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold mb-12 text-[#0f172a]" data-aos="fade-left">Projects</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Project Card Example -->
+      <div class="project-card p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition" data-aos="fade-up">
+        <h3 class="text-2xl font-semibold mb-2">Project 1</h3>
+        <p class="text-gray-600 mb-4">A web app that does something amazing.</p>
+        <a href="#" class="text-[#3b82f6] font-bold hover:underline">View Project →</a>
+      </div>
+      <div class="project-card p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-2xl font-semibold mb-2">Project 2</h3>
+        <p class="text-gray-600 mb-4">Another project showcasing my skills.</p>
+        <a href="#" class="text-[#3b82f6] font-bold hover:underline">View Project →</a>
+      </div>
+      <!-- Add more project cards here -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-8 bg-[#0f172a] text-white text-center">
+    <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Get In Touch</h2>
+    <p data-aos="fade-up" data-aos-delay="200">Email me at <a href="mailto:sarosh@example.com" class="text-[#facc15]">sarosh@example.com</a></p>
+  </section>
+
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  
+  <!-- AOS.js -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+  
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
